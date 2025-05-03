@@ -85,8 +85,10 @@
         <a href="mailto:gensogram@gmail.com">Mail to Gensogram</a>
     </div>
 </div>
+<ol>
 <li>Test</li>
 <li>Code</li>
+</ol>
 <footer>
     <p>Gensogram - DevOps Academy</p>
     <p>Copyright &copy; 2024 by <a href="https://gensogram.com/">Gensogram</a></p>
