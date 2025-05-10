@@ -1,7 +1,7 @@
 pipeline {
   agent any
   tools {
-    maven 'maven3.9.6'
+    maven 'maven3.9.7'
   }
   stages{
     stage('Clone from GitHub') {
@@ -25,17 +25,18 @@ pipeline {
         echo 'Building done'
       }
     }
-    stage('Deploy to Nexus') {
-      steps{
-        echo 'Deploying to Nexus'
-        sh 'mvn deploy'
-        echo 'Deployed to Nexus'
-      }
-    }
     stage('Deploy to Tomcat') {
       steps{
         echo 'Deploying to Tomcat'
-        deploy adapters: [tomcat9(credentialsId: 'Tomcat_Cred', path: '', url: 'http://3.99.143.117:8080/')], contextPath: null, war: 'target/*war'
+        deploy adapters: [
+        tomcat9(
+            credentialsId: 'Tomcat_Cred',
+            path:         '',
+            url:          'http://35.183.34.87:7000/'
+        )
+        ],
+        contextPath: null,
+        war:         'target/*.war'
         echo 'Successfully Deployed'
       }
     }
