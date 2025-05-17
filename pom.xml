@@ -107,7 +107,7 @@
 	    <snapshotRepository>
 	      <id>nexus</id>
 	      <name>Gensogram Snapshot Nexus Repository</name>
-	      <urlhttp://35.182.216.111:8081/repository/maven-web-app-snapshot/</url>
+	      <url>http://35.182.216.111:8081/repository/maven-web-app-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
